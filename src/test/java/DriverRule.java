@@ -4,10 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class DriverRule extends ExternalResource {
-    private static WebDriver driver;
+import static Api.ApiUrls.BASE_URI;
 
-    public static WebDriver getDriver() {
+public class DriverRule extends ExternalResource {
+    private WebDriver driver;
+
+    public WebDriver getDriver() {
         return driver;
     }
 
@@ -28,6 +30,7 @@ public class DriverRule extends ExternalResource {
         } else {
             initChrome();
         }
+        driver.get(BASE_URI);
     }
 
     private void initYandex() {

@@ -9,22 +9,20 @@ import static Api.ApiUrls.BASE_URI;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ConstructorTest {
-    private DriverRule driverRule = new DriverRule();
 
     @Rule
-    public DriverRule driver = new DriverRule();
+    public DriverRule driverRule = new DriverRule();
 
 
     @Test
     @DisplayName("Переход к разделу Булки")
     @Description("Go to the bun section")
     public void GoToTheBunSectionTest() {
-        WebDriver driver = driverRule.getDriver();
-        driver.get(BASE_URI);
+        MainPage mainPage = new MainPage(driverRule.getDriver());
 
-        new MainPage(driver)
+        mainPage
                 .clickFillingsTab();
-        Boolean actual = new MainPage(driver)
+        boolean actual = mainPage
                 .clickBunsTab()
                 .isBunsIsDisplayed();
 
@@ -36,10 +34,9 @@ public class ConstructorTest {
     @DisplayName("Переход к разделу Соусы")
     @Description("Go to the sauces section")
     public void GoToTheSaucesSectionTest() {
-        WebDriver driver = driverRule.getDriver();
-        driver.get(BASE_URI);
 
-        Boolean actual = new MainPage(driver)
+
+        boolean actual = new MainPage(driverRule.getDriver())
                 .clickSaucesTab()
                 .isSaucesIsDisplayed();
 
@@ -50,10 +47,8 @@ public class ConstructorTest {
     @DisplayName("Переход к разделу Начинки")
     @Description("Go to the fillings section")
     public void GoToTheFillingsSectionTest() {
-        WebDriver driver = driverRule.getDriver();
-        driver.get(BASE_URI);
 
-        Boolean actual = new MainPage(driver)
+        boolean actual = new MainPage(driverRule.getDriver())
                 .clickFillingsTab()
                 .isFillingsIsDisplayed();
 

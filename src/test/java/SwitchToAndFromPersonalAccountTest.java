@@ -15,28 +15,26 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 public class SwitchToAndFromPersonalAccountTest extends TemplateData {
-    private DriverRule driverRule = new DriverRule();
 
     @Rule
-    public DriverRule driver = new DriverRule();
+    public DriverRule driverRule = new DriverRule();
 
 
     @Test
     @DisplayName("Переход в личный кабинет авторизованного пользователяпо клику на «Личный кабинет»")
     @Description("Switch to personal account auth user")
     public void SwitchToPersonalAccountAuthUserTest() {
-        WebDriver driver = driverRule.getDriver();
-        driver.get(BASE_URI);
 
-        new MainPage(driver)
+        new MainPage(driverRule.getDriver())
                 .clickLogInAccountButton();
-        new LoginPage(driver)
+        new LoginPage(driverRule.getDriver())
                 .signInUser(user.getEmail(), user.getPassword());
-        new MainPage(driver)
+        new MainPage(driverRule.getDriver())
                 .clickPersonalAccountButtonAuthUser();
-        new ProfilePage(driver)
+        new ProfilePage(driverRule.getDriver())
                 .isAccountTextDisplayed();
-        assertThat("Некоректный URL страницы Личного кабинета", driver.getCurrentUrl(), containsString("/profile"));
+        assertThat("Некоректный URL страницы Личного кабинета", driverRule.getDriver().getCurrentUrl(),
+                containsString("/profile"));
 
     }
 
@@ -44,12 +42,10 @@ public class SwitchToAndFromPersonalAccountTest extends TemplateData {
     @DisplayName("Переход в личный кабинет неавторизованного пользователя по клику на «Личный кабинет»")
     @Description("Switch to personal account unauth user")
     public void SwitchToPersonalAccountUnAuthUserTest() {
-        WebDriver driver = driverRule.getDriver();
-        driver.get(BASE_URI);
 
-        new MainPage(driver)
+        new MainPage(driverRule.getDriver())
                 .clickPersonalAccountButton();
-        Boolean actual = new LoginPage(driver)
+        boolean actual = new LoginPage(driverRule.getDriver())
                 .isSignInButtonDisplayed();
         assertTrue("Личный кабинет не открывается у неавторизованного пользователя", actual);
 
@@ -59,16 +55,14 @@ public class SwitchToAndFromPersonalAccountTest extends TemplateData {
     @DisplayName("Переход из личного кабинета в конструктор по клику на «Конструктор»")
     @Description("Switch from personal account to constructor")
     public void SwitchFromPersonalAccountToConstructorTest() {
-        WebDriver driver = driverRule.getDriver();
-        driver.get(BASE_URI);
 
-        new MainPage(driver)
+        new MainPage(driverRule.getDriver())
                 .clickLogInAccountButton();
-        new LoginPage(driver)
+        new LoginPage(driverRule.getDriver())
                 .signInUser(user.getEmail(), user.getPassword());
-        new MainPage(driver)
+        new MainPage(driverRule.getDriver())
                 .clickPersonalAccountButtonAuthUser();
-        Boolean actual = new ProfilePage(driver)
+        boolean actual = new ProfilePage(driverRule.getDriver())
                 .clickConstructorButton()
                 .isBunsIsDisplayed();
         assertTrue("Конструктор не открывается", actual);
@@ -79,16 +73,14 @@ public class SwitchToAndFromPersonalAccountTest extends TemplateData {
     @DisplayName("Переход из личного кабинета в конструктор по клику на логотип Stellar Burgers")
     @Description("Switch from personal account to constructor  to logo")
     public void SwitchFromPersonalAccountToConstructorToLogoTest() {
-        WebDriver driver = driverRule.getDriver();
-        driver.get(BASE_URI);
 
-        new MainPage(driver)
+        new MainPage(driverRule.getDriver())
                 .clickLogInAccountButton();
-        new LoginPage(driver)
+        new LoginPage(driverRule.getDriver())
                 .signInUser(user.getEmail(), user.getPassword());
-        new MainPage(driver)
+        new MainPage(driverRule.getDriver())
                 .clickPersonalAccountButtonAuthUser();
-        Boolean actual = new ProfilePage(driver)
+        boolean actual = new ProfilePage(driverRule.getDriver())
                 .clickLogoButton()
                 .isBunsIsDisplayed();
         assertTrue("Главная страница не открывается", actual);

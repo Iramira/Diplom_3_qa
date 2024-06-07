@@ -14,19 +14,18 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class RegistrationTest extends TemplateData{
-    private DriverRule driverRule = new DriverRule();
+
+
 
     @Rule
-    public DriverRule driver = new DriverRule();
+    public DriverRule driverRule = new DriverRule();
 
     @Test
     @DisplayName("Успешная регистрация пользователя")
     @Description("Successful user registration")
     public void successfulUserRegistrationTest() {
-        WebDriver driver = driverRule.getDriver();
-        driver.get(BASE_URI);
 
-        String actual = new MainPage(driver)
+        String actual = new MainPage(driverRule.getDriver())
                 .clickPersonalAccountButton()
                 .clickRegistrationButton()
                 .registerUser(user.getName(), user.getEmail(), user.getPassword())
@@ -40,18 +39,14 @@ public class RegistrationTest extends TemplateData{
     @DisplayName("Ошибка при пароле менее 6 символов")
     @Description("Registration with invalid password")
     public void registrationWithInvalidPasswordTest() {
-        WebDriver driver = driverRule.getDriver();
-        driver.get(BASE_URI);
 
 
-
-
-        new MainPage(driver)
+        new MainPage(driverRule.getDriver())
                 .clickPersonalAccountButton()
                 .clickRegistrationButton()
                 .registerUser(user.getName(), user.getEmail(), user.getPassword().substring(0, 4));
 
-        String actual = new RegistrationPage(driver).getErrorMessage();
+        String actual = new RegistrationPage(driverRule.getDriver()).getErrorMessage();
 
         MatcherAssert.assertThat("Некорректное сообщение об ошибке", actual,equalTo("Некорректный пароль"));
 
