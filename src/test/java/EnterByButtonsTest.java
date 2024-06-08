@@ -2,11 +2,9 @@ import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Rule;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 import ru.yandex.Stellarburgers.pageObject.LoginPage;
 import ru.yandex.Stellarburgers.pageObject.MainPage;
 
-import static Api.ApiUrls.BASE_URI;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 public class EnterByButtonsTest extends TemplateData {

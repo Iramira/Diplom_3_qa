@@ -1,15 +1,11 @@
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-
 import org.hamcrest.MatcherAssert;
-
 import org.junit.Rule;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 import ru.yandex.Stellarburgers.pageObject.MainPage;
 import ru.yandex.Stellarburgers.pageObject.RegistrationPage;
 
-import static Api.ApiUrls.BASE_URI;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 

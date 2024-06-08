@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="645cfe44-4004-446f-b362-9ad30e6e5995" name="Changes" comment="Diplom_3. Tests Stellar Burgers">
+    <list default="true" id="645cfe44-4004-446f-b362-9ad30e6e5995" name="Changes" comment="Diplom_3. Внесла исправления по замечаниям">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ConstructorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConstructorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DriverRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DriverRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/EnterByButtonsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EnterByButtonsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ExitAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExitAccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RegistrationTest.java" afterDir="false" />
@@ -44,14 +43,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/Sprint_4&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/user/Diplom/Diplom_3_qa"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,11 +67,19 @@
       <option name="project" value="LOCAL" />
       <updated>1717609515358</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Diplom_3. Внесла исправления по замечаниям">
+      <created>1717759878235</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717759878235</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Diplom_3. Tests Stellar Burgers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Diplom_3. Tests Stellar Burgers" />
+    <MESSAGE value="Diplom_3. Внесла исправления по замечаниям" />
+    <option name="LAST_COMMIT_MESSAGE" value="Diplom_3. Внесла исправления по замечаниям" />
   </component>
 </project>

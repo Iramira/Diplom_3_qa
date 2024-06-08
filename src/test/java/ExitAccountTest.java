@@ -2,11 +2,10 @@ import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Rule;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 import ru.yandex.Stellarburgers.pageObject.LoginPage;
 import ru.yandex.Stellarburgers.pageObject.MainPage;
 import ru.yandex.Stellarburgers.pageObject.ProfilePage;
-import static Api.ApiUrls.BASE_URI;
+
 import static org.junit.Assert.assertTrue;
 
 public class ExitAccountTest extends TemplateData{
